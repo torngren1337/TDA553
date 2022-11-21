@@ -1,0 +1,39 @@
+class Animal {
+  private String name;
+
+  public Animal(String name) {
+    this.name = name;
+  }
+
+  public void printName() {
+    System.out.println("My name is " + name);
+  }
+}
+
+
+class Bird extends Animal {
+  public Animal(String name) {
+    super(name);
+  }
+
+  public void fly() {
+    System.out.println("Flap flap");
+  }
+}
+
+
+class Bird {
+  private Animal animal;
+ 
+  public Bird(String name) {
+    this.animal = new Animal(name);
+  }
+
+  public void printName() {
+    animal.printName();
+  }
+ 
+  public void fly() {
+    System.out.println("Flap flap");
+  }
+}
